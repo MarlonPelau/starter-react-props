@@ -1,10 +1,12 @@
 import React from "react";
 
-function Header() {
+function Header(props) {
+  console.log(props)
+
   return (
     <header>
-      <h1></h1>
-      <h2></h2>
+      <h1>Title: {props.name} </h1>
+      <h2>City: {props.city} </h2>
     </header>
   );
 }

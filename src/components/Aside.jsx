@@ -1,10 +1,12 @@
-import React from "react";
-
-function Aside() {
+function Aside(props) {
   return (
     <aside>
       <h3>Roster:</h3>
-      <ol></ol>
+      <ol>
+        {props.dogs.map((dog) => (
+         dog.present && <li>{dog.name}</li>
+        ))}
+      </ol>
     </aside>
   );
 }
